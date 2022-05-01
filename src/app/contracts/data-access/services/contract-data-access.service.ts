@@ -33,6 +33,7 @@ export class ContractDataAccessService {
     return of<ServerResponse<Contract[]>>({
       status: true,
       data: fakeData,
+      statusCode: 200,
     }).pipe(delay(1000));
   }
 }

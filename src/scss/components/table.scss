@@ -1,0 +1,49 @@
+.ontop-custom-table {
+  .p-datatable-tbody > tr > td > .p-column-title,
+  .p-datatable-thead > tr > th {
+    font-weight: 700;
+  }
+
+  .p-datatable-thead > tr > th {
+    border: none;
+  }
+
+  .p-datatable-tbody > tr > td {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border: none;
+  }
+
+  .p-datatable-tbody > tr:nth-child(odd) {
+    background-color: map-get($palette, 'p-gray-4');
+  }
+
+  @media (max-width: 960px) {
+    .p-datatable-tbody {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .p-datatable-tbody > tr {
+      padding: 1rem;
+      margin-top: 1.5rem;
+      box-shadow: $default-shadow;
+      border-radius: 5px;
+      background-color: map-get($palette, 'p-white');
+    }
+
+    .p-datatable-tbody > tr:nth-child(odd) {
+      background-color: map-get($palette, 'p-white');
+    }
+
+    .p-datatable-tbody > tr > td {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border: 0 none;
+    }
+
+    .p-datatable-tbody > tr > td:nth-child(odd) {
+      background-color: map-get($palette, 'p-gray-4');
+    }
+  }
+}
