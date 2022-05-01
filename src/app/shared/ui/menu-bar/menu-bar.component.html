@@ -1,0 +1,47 @@
+<nav>
+  <div class="menu-container" [class.open]="isOpen">
+    <div class="flex justify-content-between align-items-center px-4 menu-bar">
+      <img src="/assets/images/logo.svg" alt="logo" height="40" width="120" />
+      <ul class="menu-items lg:flex lg:mx-auto">
+        <ng-container *ngFor="let item of items">
+          <li
+            class="px-4 py-5 lg:py-0 lg:flex justify-content-between align-items-center menu-item"
+            (click)="toggle($event)"
+          >
+            {{ item }}
+
+            <ng-container *ngIf="(isLargeDevice$ | async) === false">
+              <input type="checkbox" />
+            </ng-container>
+
+            <ul class="py-4 lg:p-4">
+              <li>Hi</li>
+            </ul>
+          </li>
+        </ng-container>
+        <li
+          class="px-4 py-5 lg:py-0 lg:flex justify-content-between align-items-center menu-item user-profile"
+          (click)="toggle($event)"
+        >
+          <img src="/assets/images/user.png" alt="logo" />
+
+          <ng-container *ngIf="(isLargeDevice$ | async) === false">
+            <input type="checkbox" />
+          </ng-container>
+
+          <ul class="py-4 lg:p-4">
+            <li>Hi</li>
+          </ul>
+        </li>
+      </ul>
+
+      <ng-container *ngIf="(isLargeDevice$ | async) === false">
+        <div class="burger" (click)="isOpen = !isOpen">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</nav>

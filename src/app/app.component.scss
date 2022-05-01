@@ -2,14 +2,20 @@
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 60px;
 
   @media (min-width: 961px) {
     display: flex;
+  }
+
+  @media (min-width: 992px) {
+    padding-top: 100px;
   }
 }
 
 .page-container {
   width: 100%;
+  padding: 1rem;
 }
 
 .message-container {
