@@ -1,0 +1,26 @@
+.p-inputtext,
+.p-inputtext:enabled:hover {
+  border-color: map-get($palette, 'gray-3');
+}
+
+.p-inputtext::placeholder {
+  font-size: 0.8rem;
+  color: map-get($palette, 'gray-3');
+}
+
+.p-input-icon-left > i:first-of-type {
+  color: map-get($palette, 'gray-2');
+  font-size: 1.2rem;
+}
+
+.p-inputtext:enabled:focus {
+  box-shadow: 0 0 0 0.2rem rgba(map-get($palette, 'primary'), 0.5);
+  border-color: map-get($palette, 'primary');
+}
+
+.p-inputtext.ontop-shadow-control {
+  border: none;
+  background-color: map-get($palette, 'white');
+  box-shadow: $default-shadow;
+  border-radius: 5px;
+}

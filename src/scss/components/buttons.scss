@@ -1,0 +1,31 @@
+button.p-button.ontop-btn {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: center;
+
+  .p-button-label {
+    flex: 0 1 auto;
+  }
+}
+
+button.p-button.ontop-btn.p-button-primary,
+button:active.p-button.ontop-btn.p-button-primary {
+  background-color: map-get($palette, 'primary');
+  border: 1px solid map-get($palette, 'primary');
+}
+
+button:focus.p-button.ontop-btn.p-button-primary {
+  box-shadow: 0 0 0 0.2rem rgba(map-get($palette, 'primary'), 0.5);
+}
+
+button.p-button.ontop-btn.p-button-secondary,
+button:active.p-button.ontop-btn.p-button-secondary,
+button:hover.p-button.ontop-btn.p-button-secondary {
+  background-color: map-get($palette, 'gray');
+  border: 1px solid map-get($palette, 'gray');
+  color: map-get($palette, 'black');
+}
+
+button:focus.p-button.ontop-btn.p-button-secondary {
+  box-shadow: 0 0 0 0.2rem rgba(map-get($palette, 'gray'), 0.5);
+}

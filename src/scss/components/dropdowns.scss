@@ -1,0 +1,33 @@
+.p-dropdown {
+  border: none;
+  box-shadow: $default-shadow;
+  border-radius: 5px;
+  min-height: 38px;
+  align-items: center;
+}
+
+.p-dropdown .p-dropdown-label.p-placeholder {
+  font-size: 0.8rem;
+  color: map-get($palette, 'gray-3');
+}
+
+.p-dropdown:not(.p-disabled).p-focus {
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem rgba(map-get($palette, 'primary'), 0.5);
+  border-color: map-get($palette, 'primary');
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  color: map-get($palette, 'white');
+  background: map-get($palette, 'primary');
+}
+
+.p-dropdown .p-dropdown-clear-icon,
+.p-dropdown .p-dropdown-trigger .pi {
+  color: map-get($palette, 'gray-3');
+  font-size: 0.8rem;
+}
+
+.p-dropdown .p-dropdown-clear-icon {
+  margin-top: -0.4rem;
+}
