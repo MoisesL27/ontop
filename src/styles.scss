@@ -16,3 +16,16 @@ li {
   padding: 0;
   list-style: none;
 }
+
+.menu-container .menu-bar .menu-items > li.menu-item.user-profile {
+  @media (min-width: 992px) {
+    position: absolute;
+    right: 1rem;
+  }
+}
+
+.menu-container .menu-bar .menu-items > li.menu-item.user-profile ul {
+  @media (min-width: 992px) {
+    transform: translate(-70%);
+  }
+}

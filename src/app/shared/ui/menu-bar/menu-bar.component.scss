@@ -103,16 +103,3 @@ nav {
     margin-top: 3px;
   }
 }
-
-.user-profile {
-  @media (min-width: 992px) {
-    position: absolute;
-    right: 1rem;
-  }
-}
-
-.menu-items > li.user-profile ul {
-  @media (min-width: 992px) {
-    transform: translate(-70%);
-  }
-}

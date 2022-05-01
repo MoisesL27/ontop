@@ -21,7 +21,8 @@
     "lib": ["es2020", "dom"],
     "paths": {
       "@ontop/shared/data-access": ["app/shared/data-access/index.ts"],
-      "@ontop/shared/utils": ["app/shared/utils/index.ts"]
+      "@ontop/shared/utils": ["app/shared/utils/index.ts"],
+      "@ontop/shared/ui": ["app/shared/ui/index.ts"]
     }
   },
   "angularCompilerOptions": {

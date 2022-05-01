@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { BreakPointService } from '@ontop/shared/utils';
+import { MenuItem } from './menu-item';
 @Component({
   selector: 'ontop-menu-bar',
   templateUrl: './menu-bar.component.html',
@@ -7,10 +8,10 @@ import { BreakPointService } from '@ontop/shared/utils';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuBarComponent {
-  isOpen = false;
+  @Input() items: MenuItem[] = [];
 
+  isOpen = false;
   isLargeDevice$ = this.breakPointService.isLargeDevice$;
-  items = ['Contracts', 'Documents', 'Payout', 'Time'];
 
   constructor(private breakPointService: BreakPointService) {}
 
