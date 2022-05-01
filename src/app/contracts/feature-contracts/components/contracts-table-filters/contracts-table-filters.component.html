@@ -1,0 +1,55 @@
+<div class="filters-container">
+  <div class="flex flex-column md:flex-row">
+    <div class="search-input-container">
+      <span class="p-input-icon-left w-full">
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText placeholder="Search" />
+      </span>
+    </div>
+
+    <div class="flex md:flex-shrink-0 mt-3 md:mt-0 md:ml-4">
+      <button
+        pButton
+        type="button"
+        icon="pi pi-check"
+        label="Filter"
+        class="p-button-secondary flex-shrink-0"
+        style="min-width: 100px"
+      ></button>
+      <button
+        pButton
+        type="button"
+        icon="pi pi-check"
+        label="New hire"
+        class="p-button-primary ml-3 hire-btn"
+      ></button>
+    </div>
+  </div>
+  <div
+    class="flex flex-column filters-second-row sm:flex-row sm:flex-wrap md:flex-nowrap"
+  >
+    <p-calendar
+      selectionMode="range"
+      inputId="range"
+      class="control-filter mt-2 md:mt-3"
+      [readonlyInput]="true"
+    ></p-calendar>
+
+    <p-dropdown
+      placeholder="Select a City"
+      optionLabel="name"
+      class="control-filter mt-2 md:mt-3"
+      [showClear]="true"
+      [options]="contractTypes"
+    ></p-dropdown>
+    <input class="control-filter mt-2 md:mt-3" type="text" pInputText />
+
+    <p-dropdown
+      placeholder="Select a City"
+      optionLabel="name"
+      class="control-filter mt-2 md:mt-3"
+      [options]="status"
+      [showClear]="true"
+    ></p-dropdown>
+  </div>
+</div>

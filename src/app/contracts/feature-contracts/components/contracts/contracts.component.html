@@ -1,1 +1,8 @@
-<ontop-contracts-table [contracts$]="contracts$"></ontop-contracts-table>
+<h1 class="text-center">Contracts for {{ client }}</h1>
+<ontop-contracts-table-filters
+  class="block mt-5"
+></ontop-contracts-table-filters>
+<ontop-contracts-table
+  class="block mt-4"
+  [contracts$]="contracts$"
+></ontop-contracts-table>

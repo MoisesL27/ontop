@@ -1,0 +1,42 @@
+.filters-container {
+  @media (max-width: 960px) {
+    padding: 1rem;
+  }
+}
+
+.search-input-container {
+  width: 100%;
+
+  input {
+    width: 100%;
+  }
+}
+
+.hire-btn {
+  width: 100%;
+  max-width: 200px;
+
+  @media (min-width: 576px) {
+    width: 200px;
+  }
+}
+
+.filters-second-row {
+  gap: 10px;
+
+  .control-filter,
+  .control-filter .p-dropdown,
+  .control-filter .p-calendar {
+    width: 100%;
+  }
+
+  .control-filter {
+    @media (min-width: 576px) {
+      width: calc(50% - 10px);
+    }
+
+    @media (min-width: 961px) {
+      width: 25%;
+    }
+  }
+}

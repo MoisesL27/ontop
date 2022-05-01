@@ -8,6 +8,8 @@ import { map } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContractsComponent implements OnInit {
+  client = 'Moises Leonor';
+
   contracts$ = this.contractDataAccessService
     .getContracts()
     .pipe(map((response) => response.data));
