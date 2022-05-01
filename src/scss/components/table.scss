@@ -15,7 +15,19 @@
   }
 
   .p-datatable-tbody > tr:nth-child(odd) {
-    background-color: map-get($palette, 'p-gray-4');
+    background-color: map-get($palette, 'gray-4');
+  }
+
+  .p-datatable-thead > tr > .actions-th,
+  .p-datatable-tbody > tr > .actions-td {
+    text-align: center;
+  }
+
+  .p-datatable-tbody > tr > td .table-actions-icon {
+    color: #c4c4c4;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
   }
 
   @media (max-width: 960px) {
@@ -29,11 +41,11 @@
       margin-top: 1.5rem;
       box-shadow: $default-shadow;
       border-radius: 5px;
-      background-color: map-get($palette, 'p-white');
+      background-color: map-get($palette, 'white');
     }
 
     .p-datatable-tbody > tr:nth-child(odd) {
-      background-color: map-get($palette, 'p-white');
+      background-color: map-get($palette, 'white');
     }
 
     .p-datatable-tbody > tr > td {
@@ -43,7 +55,37 @@
     }
 
     .p-datatable-tbody > tr > td:nth-child(odd) {
-      background-color: map-get($palette, 'p-gray-4');
+      background-color: map-get($palette, 'gray-4');
     }
+
+    .p-datatable-tbody > tr > .actions-td {
+      text-align: left;
+    }
+
+    .p-datatable-tbody > tr > .actions-td .p-column-title {
+      width: 100%;
+    }
+  }
+}
+
+.ontop-table-actions.p-menu.p-menu-overlay {
+  border: none;
+  box-shadow: $default-shadow;
+  padding: 0.5rem;
+
+  .p-menuitem-link {
+    padding: 1rem;
+  }
+
+  li:not(:last-child) .p-menuitem-link {
+    border-bottom: 1px solid map-get($palette, 'gray');
+  }
+
+  .p-menuitem-link:hover {
+    background-color: transparent;
+  }
+
+  .p-menuitem-link:hover span:first-child {
+    color: map-get($palette, 'primary');
   }
 }

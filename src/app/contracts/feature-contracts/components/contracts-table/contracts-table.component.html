@@ -1,40 +1,54 @@
-<p-table
-  class="ontop-custom-table"
-  responsiveLayout="stack"
-  [value]="(contracts$ | async) ?? []"
->
-  <ng-template pTemplate="header" let-columns>
-    <tr>
-      <th>Contactor name</th>
-      <th>Type</th>
-      <th>Start date</th>
-      <th>Amount</th>
-      <th>Status</th>
-      <th>Actions</th>
-    </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-contract let-columns="columns">
-    <tr>
-      <td>
-        <span class="p-column-title">Contactor name</span>{{ contract.name }}
-      </td>
-      <td><span class="p-column-title">Type</span>{{ contract.type }}</td>
-      <td>
-        <span class="p-column-title">Start date</span>{{ contract.startDate }}
-      </td>
+<div class="contracts-table">
+  <p-table
+    class="ontop-custom-table"
+    responsiveLayout="stack"
+    [value]="(contracts$ | async) ?? []"
+  >
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th>Contactor name</th>
+        <th>Type</th>
+        <th>Start date</th>
+        <th>Amount</th>
+        <th>Status</th>
+        <th class="actions-th">Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-contract let-columns="columns">
+      <tr>
+        <td>
+          <span class="p-column-title">Contactor name</span>{{ contract.name }}
+        </td>
+        <td><span class="p-column-title">Type</span>{{ contract.type }}</td>
+        <td>
+          <span class="p-column-title">Start date</span>{{ contract.startDate }}
+        </td>
 
-      <td>
-        <span class="p-column-title">Amount</span
-        >{{ contract.amount | currency: 'USD' }}
-      </td>
-      <td>
-        <span class="p-column-title">Status</span>
-        {{ contract.status }}
-      </td>
-      <td>
-        <span class="p-column-title">Actions</span>
-        ...
-      </td>
-    </tr>
-  </ng-template>
-</p-table>
+        <td>
+          <span class="p-column-title">Amount</span
+          >{{ contract.amount | currency: 'USD' }}
+        </td>
+        <td>
+          <span class="p-column-title">Status</span>
+          {{ contract.status }}
+        </td>
+        <td class="actions-td">
+          <span class="p-column-title">Actions</span>
+          <i
+            class="pi pi-ellipsis-v table-actions-icon"
+            (click)="menu.toggle($event)"
+          ></i>
+
+          <p-menu
+            class="ontop-table-actions"
+            styleClass="ontop-table-actions"
+            #menu
+            [popup]="true"
+            [model]="actions"
+            appendTo="body"
+          ></p-menu>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
