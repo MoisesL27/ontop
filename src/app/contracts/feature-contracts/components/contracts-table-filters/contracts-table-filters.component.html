@@ -32,6 +32,7 @@
       selectionMode="range"
       inputId="range"
       class="control-filter mt-2 md:mt-3"
+      placeholder="Create on:    ----"
       [readonlyInput]="true"
     ></p-calendar>
 
@@ -42,7 +43,13 @@
       [showClear]="true"
       [options]="contractTypes"
     ></p-dropdown>
-    <input class="control-filter mt-2 md:mt-3" type="text" pInputText />
+
+    <input
+      class="control-filter mt-2 md:mt-3"
+      type="text"
+      pInputText
+      placeholder="Contractor Name"
+    />
 
     <p-dropdown
       placeholder="Select a City"
