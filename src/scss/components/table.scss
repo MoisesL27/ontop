@@ -67,6 +67,13 @@
       width: 100%;
     }
   }
+
+  @media (max-width: 400px) {
+    .p-datatable-tbody > tr > td,
+    .p-datatable-tbody > tr > td > .p-column-title {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 .ontop-table-actions.p-menu.p-menu-overlay {
