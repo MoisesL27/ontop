@@ -1,6 +1,8 @@
+import { BreakPointService } from '@ontop/shared/utils';
 import { Component } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { MenuItem } from './shared/ui';
+import { CdkDragEnd } from '@angular/cdk/drag-drop';
 @Component({
   selector: 'ontop-root',
   templateUrl: './app.component.html',
@@ -81,7 +83,12 @@ export class AppComponent {
     },
   ];
 
-  constructor(private primengConfig: PrimeNGConfig) {}
+  isLargeDevice$ = this.breakPointService.isLargeDevice$;
+
+  constructor(
+    private primengConfig: PrimeNGConfig,
+    private breakPointService: BreakPointService
+  ) {}
 
   ngOnInit() {
     this.primengConfig.ripple = true;

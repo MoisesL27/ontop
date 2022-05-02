@@ -4,6 +4,17 @@
     <router-outlet></router-outlet>
   </div>
   <div class="message-container">
-    <img src="/assets/images/message.svg" alt="message" />
+    <ng-container *ngIf="isLargeDevice$ | async">
+      <img src="/assets/images/message.svg" alt="message" />
+    </ng-container>
+
+    <ng-container *ngIf="(isLargeDevice$ | async) === false">
+      <img
+        src="/assets/images/message.svg"
+        alt="message"
+        cdkDragBoundary=".page-container"
+        cdkDrag
+      />
+    </ng-container>
   </div>
 </div>

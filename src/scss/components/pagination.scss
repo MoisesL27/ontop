@@ -9,3 +9,11 @@
 .p-paginator .p-paginator-last {
   color: map-get($palette, 'primary');
 }
+
+.p-paginator .p-paginator-pages .p-paginator-page {
+  color: map-get($palette, 'primary');
+}
+
+.p-link:focus {
+  box-shadow: 0 0 0 0.2rem rgba(map-get($palette, 'primary'), 0.5);
+}
