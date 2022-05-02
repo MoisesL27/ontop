@@ -1,7 +1,7 @@
 // Overwrite styles of menu bar
 
 .menu-container .menu-bar .menu-items > li.menu-item.user-profile {
-  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid rgba(#c4c4c4, 0.5);
 
   .item-text {
     margin-left: 1rem;
@@ -12,6 +12,7 @@
     position: absolute;
     right: 1rem;
     border-bottom: 0;
+    min-width: 220px;
 
     &::before {
       content: '';
@@ -33,7 +34,14 @@
 }
 
 .menu-container .menu-bar .menu-items > li.menu-item.user-profile ul {
+  min-width: 200px;
   @media (min-width: 992px) {
-    transform: translate(-50%);
+    transform: translate(0);
+  }
+}
+
+.menu-container .menu-bar .menu-items > li.menu-item.user-profile ul li {
+  @media (max-width: 991px) {
+    padding-left: 0 !important;
   }
 }
