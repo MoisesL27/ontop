@@ -29,3 +29,14 @@
   box-shadow: $default-shadow;
   border: none;
 }
+
+.p-datepicker table td.p-datepicker-today > span.p-highlight,
+.p-datepicker table td > span.p-highlight {
+  background-color: map-get($palette, 'primary');
+}
+
+.p-datepicker table td > span:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem rgba(map-get($palette, 'primary'), 0.5);
+}
