@@ -3,6 +3,7 @@
   class="block mt-5"
 ></ontop-contracts-table-filters>
 <ontop-contracts-table
-  class="block mt-4"
+  class="block mt-5"
   [contracts$]="contracts$"
+  [loading$]="loadingContracts.isLoading$"
 ></ontop-contracts-table>

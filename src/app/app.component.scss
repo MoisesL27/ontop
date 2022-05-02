@@ -15,7 +15,7 @@
 
 .page-container {
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 
 .message-container {
@@ -23,10 +23,12 @@
   justify-content: flex-end;
 
   img {
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     flex-shrink: 0;
     cursor: pointer;
+    position: absolute;
+    top: 60px;
   }
 
   img:active {
@@ -34,6 +36,12 @@
   }
 
   @media (min-width: 961px) {
+    img {
+      width: 120px;
+      height: 120px;
+      position: static;
+    }
+
     padding: 0 2rem;
     flex-shrink: 0;
     height: 80vh;

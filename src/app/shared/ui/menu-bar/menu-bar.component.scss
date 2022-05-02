@@ -46,6 +46,8 @@ nav {
     width: auto;
     height: 100%;
     transform: none;
+    width: calc(100% - 290px) !important;
+    margin-right: auto;
   }
 }
 

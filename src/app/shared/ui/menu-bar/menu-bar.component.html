@@ -2,12 +2,12 @@
   <div class="menu-container" [class.open]="isOpen">
     <div class="flex justify-content-between align-items-center px-4 menu-bar">
       <img src="/assets/images/logo.svg" alt="logo" height="40" width="120" />
-      <ul class="menu-items lg:flex lg:mx-auto">
+      <ul #itemsContainer class="menu-items lg:flex xl:justify-content-center">
         <ng-container *ngFor="let item of items">
           <li
             class="px-4 py-3 lg:py-0 lg:flex justify-content-between align-items-center menu-item
             {{ item.cssClasses }}"
-            (click)="toggle($event)"
+            (click)="toggle($event, itemsContainer)"
           >
             <div class="flex align-items-center">
               <ng-container *ngIf="item.iconCssClass">

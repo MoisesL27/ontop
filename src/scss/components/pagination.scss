@@ -1,0 +1,11 @@
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: map-get($palette, 'primary');
+  border-color: map-get($palette, 'primary');
+}
+
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-prev,
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-last {
+  color: map-get($palette, 'primary');
+}

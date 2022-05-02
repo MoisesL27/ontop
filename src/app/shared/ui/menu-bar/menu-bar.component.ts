@@ -15,8 +15,13 @@ export class MenuBarComponent {
 
   constructor(private breakPointService: BreakPointService) {}
 
-  toggle(event: Event) {
-    const item = event.target as HTMLLIElement;
+  toggle(event: Event, container: HTMLElement) {
+    const target = event.target as HTMLLIElement;
+    const item = this.getItem(target, container);
+
+    if (item === null) {
+      return;
+    }
 
     if (!item.classList.contains('menu-item')) {
       return;
@@ -29,5 +34,23 @@ export class MenuBarComponent {
     if (checkbox) {
       checkbox.checked = !checkbox.checked;
     }
+  }
+
+  private getItem(
+    element: HTMLElement,
+    rootElement: HTMLElement
+  ): HTMLElement | null {
+    if (!element || element === rootElement) {
+      return null;
+    }
+
+    if (element.classList.contains('menu-item')) {
+      return element;
+    }
+
+    return this.getItem(
+      element.parentNode as unknown as HTMLElement,
+      rootElement
+    );
   }
 }

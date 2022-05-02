@@ -1,9 +1,3 @@
-.filters-container {
-  @media (max-width: 960px) {
-    padding: 1rem;
-  }
-}
-
 .search-input-container {
   width: 100%;
 
@@ -46,4 +40,21 @@
       width: 25%;
     }
   }
+}
+
+.clear-filters {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #ff5a70;
+  font-weight: 700;
+  cursor: pointer;
+
+  .icon-delete::before {
+    color: #ff5a70;
+  }
+}
+
+.clear-filters:active {
+  transform: scale(1.1);
 }

@@ -1,20 +1,25 @@
 import { ContractDataAccessService } from './../../../data-access/services/contract-data-access.service';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { map } from 'rxjs';
+import { map, tap } from 'rxjs';
+import { LoadingFactoryService } from '@ontop/shared/utils';
 @Component({
   selector: 'ontop-contracts',
   templateUrl: './contracts.component.html',
   styleUrls: ['./contracts.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContractsComponent implements OnInit {
+export class ContractsComponent {
   client = 'Moises Leonor';
 
-  contracts$ = this.contractDataAccessService
-    .getContracts()
-    .pipe(map((response) => response.data));
+  loadingContracts = this.loadingFactoryService.getLoading(true);
 
-  constructor(private contractDataAccessService: ContractDataAccessService) {}
+  contracts$ = this.contractDataAccessService.getContracts().pipe(
+    tap(() => this.loadingContracts.finish()),
+    map((response) => response.data)
+  );
 
-  ngOnInit(): void {}
+  constructor(
+    private contractDataAccessService: ContractDataAccessService,
+    private loadingFactoryService: LoadingFactoryService
+  ) {}
 }

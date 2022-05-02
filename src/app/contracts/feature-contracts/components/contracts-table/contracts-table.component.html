@@ -2,12 +2,22 @@
   <p-table
     class="ontop-custom-table"
     responsiveLayout="stack"
+    [paginator]="true"
+    [rows]="(rows$ | async) ?? 1"
     [value]="(contracts$ | async) ?? []"
+    [loading]="(loading$ | async) ?? true"
   >
     <ng-template pTemplate="header" let-columns>
       <tr>
         <th>Contactor name</th>
-        <th>Type</th>
+        <th>
+          Type
+          <!-- <p-columnFilter
+            type="text"
+            field="name"
+            display="menu"
+          ></p-columnFilter> -->
+        </th>
         <th>Start date</th>
         <th>Amount</th>
         <th>Status</th>
