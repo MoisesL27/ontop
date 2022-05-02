@@ -1,7 +1,9 @@
+import { ContractStatus, ContractType } from '../../domain';
+
 export interface Contract {
   name: string;
-  type: 'traditional';
+  type: ContractType;
   startDate: string;
   amount: number;
-  status: 'active' | 'pending';
+  status: ContractStatus;
 }

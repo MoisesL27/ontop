@@ -30,7 +30,14 @@
         </td>
         <td>
           <span class="p-column-title">Status</span>
-          {{ contract.status }}
+          <span
+            ontopContractStatus
+            class="px-3 py-1"
+            style="max-width: 160px"
+            [status]="contract.status"
+          >
+            {{ contract.status | statusName | transloco }}
+          </span>
         </td>
         <td class="actions-td">
           <span class="p-column-title">Actions</span>

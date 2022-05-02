@@ -1,0 +1,36 @@
+@mixin chip {
+  font-size: 0.8rem;
+  border-radius: 20px;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    display: inline-block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+}
+
+.chip-active {
+  @include chip;
+  background-color: rgba(54, 207, 130, 0.18);
+  color: rgba(54, 207, 130, 1);
+
+  &::before {
+    background-color: rgba(54, 207, 130, 1);
+  }
+}
+
+.chip-pending {
+  @include chip;
+  background-color: rgba(242, 157, 66, 0.3);
+  color: rgba(242, 157, 66, 1);
+
+  &::before {
+    background-color: rgba(242, 157, 66, 1);
+  }
+}
