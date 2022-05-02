@@ -23,6 +23,12 @@ export class MenuBarComponent {
       return;
     }
 
+    if (item.classList.contains('is-link')) {
+      this.isOpen = false;
+
+      return;
+    }
+
     if (!item.classList.contains('menu-item')) {
       return;
     }

@@ -7,6 +7,7 @@
           <li
             class="px-4 py-3 lg:py-0 lg:flex justify-content-between align-items-center menu-item
             {{ item.cssClasses }}"
+            [class.is-link]="(item.children ?? []).length === 0"
             (click)="toggle($event, itemsContainer)"
           >
             <div class="flex align-items-center">
@@ -34,7 +35,10 @@
 
               <ul class="py-4 lg:p-4">
                 <ng-container *ngFor="let child of item.children">
-                  <li class="px-4 py-2">
+                  <li
+                    class="px-4 py-2 menu-item"
+                    [class.is-link]="(child.children ?? []).length === 0"
+                  >
                     <ng-container *ngIf="child.iconCssClass">
                       <i class="{{ child.iconCssClass }} mr-2"></i>
                     </ng-container>
