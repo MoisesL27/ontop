@@ -1,4 +1,6 @@
 {
   "contract-active": "Active",
-  "contract-pending": "Signature pending"
+  "contract-pending": "Signature pending",
+  "contract-traditional-type": "Traditonal",
+  "contract-custom-type": "Custom"
 }

@@ -21,11 +21,28 @@ li {
   @media (min-width: 992px) {
     position: absolute;
     right: 1rem;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      border-left: 1px solid #c4c4c4;
+      margin-right: 3rem;
+      transform: scale(0.5);
+    }
+  }
+
+  .icon-arrow-down {
+    font-size: 0.8rem;
+
+    &::before {
+      color: #bebebe;
+    }
   }
 }
 
 .menu-container .menu-bar .menu-items > li.menu-item.user-profile ul {
   @media (min-width: 992px) {
-    transform: translate(-70%);
+    transform: translate(-50%);
   }
 }

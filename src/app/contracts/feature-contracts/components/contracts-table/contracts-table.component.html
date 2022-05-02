@@ -19,7 +19,10 @@
         <td>
           <span class="p-column-title">Contactor name</span>{{ contract.name }}
         </td>
-        <td><span class="p-column-title">Type</span>{{ contract.type }}</td>
+        <td>
+          <span class="p-column-title">Type</span>
+          {{ contract.type | contractType | transloco }}
+        </td>
         <td>
           <span class="p-column-title">Start date</span>{{ contract.startDate }}
         </td>
@@ -33,7 +36,7 @@
           <span
             ontopContractStatus
             class="px-3 py-1"
-            style="max-width: 160px"
+            style="width: 150px"
             [status]="contract.status"
           >
             {{ contract.status | statusName | transloco }}

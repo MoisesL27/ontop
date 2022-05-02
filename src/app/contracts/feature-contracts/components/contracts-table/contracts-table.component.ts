@@ -12,9 +12,9 @@ export class ContractsTableComponent {
   @Input() contracts$!: Observable<Contract[]>;
 
   actions: MenuItem[] = [
-    { label: 'Edit', icon: 'pi pi-pencil' },
-    { label: 'Sign', icon: 'pi pi-key' },
-    { label: 'View summary', icon: 'pi pi-file' },
-    { label: 'Delete', icon: 'pi pi-trash' },
+    { label: 'Edit', icon: 'icon-edit' },
+    { label: 'Sign', icon: 'icon-sign' },
+    { label: 'View summary', icon: 'icon-summary' },
+    { label: 'Delete', icon: 'icon-delete' },
   ];
 }

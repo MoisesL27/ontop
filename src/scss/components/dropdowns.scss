@@ -13,8 +13,8 @@
 
 .p-dropdown:not(.p-disabled).p-focus {
   outline-offset: 0;
-  box-shadow: 0 0 0 0.2rem rgba(map-get($palette, 'primary'), 0.5);
-  border-color: map-get($palette, 'primary');
+  box-shadow: 0 0 0 0.2rem rgba(map-get($palette, 'gray'), 0.5);
+  border-color: rgba(map-get($palette, 'gray'), 0.5);
 }
 
 .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {

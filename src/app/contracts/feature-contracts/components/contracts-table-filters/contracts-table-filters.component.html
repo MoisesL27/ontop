@@ -11,7 +11,7 @@
       <button
         pButton
         type="button"
-        icon="pi pi-check"
+        icon="icon-filter"
         label="Filter"
         class="ontop-btn p-button-secondary flex-shrink-0"
         style="min-width: 100px"
@@ -19,7 +19,7 @@
       <button
         pButton
         type="button"
-        icon="pi pi-check"
+        icon="icon-add"
         label="New hire"
         class="ontop-btn p-button-primary ml-3 hire-btn"
       ></button>
@@ -32,7 +32,7 @@
       selectionMode="range"
       inputId="range"
       class="control-filter mt-2 md:mt-3"
-      placeholder="Create on:    ----"
+      placeholder="Select create on date range"
       [readonlyInput]="true"
     ></p-calendar>
 
@@ -40,6 +40,7 @@
       placeholder="Select a City"
       optionLabel="name"
       class="control-filter mt-2 md:mt-3"
+      appendTo="body"
       [showClear]="true"
       [options]="contractTypes"
     ></p-dropdown>
@@ -55,6 +56,7 @@
       placeholder="Select a City"
       optionLabel="name"
       class="control-filter mt-2 md:mt-3"
+      appendTo="body"
       [options]="status"
       [showClear]="true"
     ></p-dropdown>

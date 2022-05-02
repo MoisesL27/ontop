@@ -1,6 +1,7 @@
 interface BaseMenuItem {
   cssClasses?: string;
   children?: MenuItem[];
+  iconCssClass?: string;
 }
 
 interface MenuItemText extends BaseMenuItem {

@@ -22,6 +22,12 @@
   }
 }
 
+.hire-btn .icon-add {
+  &::before {
+    color: #ffffff;
+  }
+}
+
 .filters-second-row {
   gap: 10px;
 

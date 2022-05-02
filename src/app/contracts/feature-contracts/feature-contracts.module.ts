@@ -13,6 +13,7 @@ import { ContractsComponent } from './components/contracts/contracts.component';
 import { FeatureContractsRoutingModule } from './feature-contracts-routing.module';
 import { StatusNamePipe } from './pipes/status-name.pipe';
 import { ContractStatusDirective } from './directives/contract-status.directive';
+import { ContractTypePipe } from './pipes/contract-type.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ContractStatusDirective } from './directives/contract-status.directive'
     ContractsTableFiltersComponent,
     StatusNamePipe,
     ContractStatusDirective,
+    ContractTypePipe,
   ],
   imports: [
     CommonModule,

@@ -11,6 +11,7 @@ export class AppComponent {
     {
       text: 'Contracts',
       type: 'text',
+      iconCssClass: 'icon-user',
       children: [
         {
           text: 'Terms And Conditons',
@@ -21,6 +22,7 @@ export class AppComponent {
     {
       text: 'Documents',
       type: 'text',
+      iconCssClass: 'icon-document',
       children: [
         {
           text: 'Upload documents',
@@ -35,6 +37,7 @@ export class AppComponent {
     {
       text: 'Payout',
       type: 'text',
+      iconCssClass: 'icon-payout',
       children: [
         {
           text: 'Payment methods',
@@ -49,6 +52,7 @@ export class AppComponent {
     {
       text: 'Time',
       type: 'text',
+      iconCssClass: 'icon-time',
       children: [
         {
           text: 'Check your time',
