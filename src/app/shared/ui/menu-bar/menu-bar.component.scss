@@ -10,9 +10,10 @@ nav {
   position: relative;
 
   &.open .menu-items {
+    transition: all 0.5s;
+
     @media (max-width: 991px) {
       transform: translateY(60px);
-      transition: all 0.5s;
     }
   }
 }
@@ -54,6 +55,16 @@ nav {
 .menu-items > li {
   height: 100%;
   cursor: pointer;
+
+  @media (max-width: 991px) {
+    &:not(:last-child) {
+      order: 1;
+    }
+
+    &:last-child {
+      order: 0;
+    }
+  }
 }
 
 .menu-items > li > input {
@@ -76,6 +87,7 @@ nav {
   .item-text {
     color: rgba(137, 137, 137, 1);
     font-weight: 700;
+    width: 100%;
   }
 
   .icon-user,
@@ -83,6 +95,10 @@ nav {
   .icon-payout,
   .icon-time,
   .icon-arrow-down {
+    @media (max-width: 991px) {
+      width: 25px;
+    }
+
     &::before {
       color: rgba(137, 137, 137, 1);
     }
@@ -115,7 +131,7 @@ nav {
     background-color: #ffffff;
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
     min-width: 300px;
-    transform: translate(-30%);
+    transform: translate(-8%);
     border-end-end-radius: 5px;
     border-end-start-radius: 5px;
     z-index: 10;
@@ -136,7 +152,11 @@ nav {
 .icon-document,
 .icon-payout,
 .icon-time {
-  font-size: 1.2rem;
+  font-size: 1rem;
+
+  @media (min-width: 992px) {
+    font-size: 1rem;
+  }
 }
 
 .burger {

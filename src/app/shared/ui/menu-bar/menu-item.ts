@@ -13,6 +13,7 @@ interface MenuItemImage extends BaseMenuItem {
   type: 'image';
   url: string;
   alt?: string;
+  text?: string;
 }
 
 export type MenuItem = MenuItemText | MenuItemImage;

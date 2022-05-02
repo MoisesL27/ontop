@@ -61,6 +61,7 @@ export const items: MenuItem[] = [
     type: 'image',
     url: '/assets/images/user.png',
     cssClasses: 'user-profile',
+    text: 'Moises Leonor',
     children: [
       {
         text: 'My profile',

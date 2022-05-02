@@ -1,9 +1,11 @@
-<ontop-menu-bar [items]="items"></ontop-menu-bar>
-<div class="app-container">
+<header>
+  <ontop-menu-bar [items]="items"></ontop-menu-bar>
+</header>
+<main class="app-container">
   <div class="page-container">
     <router-outlet></router-outlet>
   </div>
-  <div class="message-container">
+  <aside class="message-container">
     <ng-container *ngIf="isLargeDevice$ | async">
       <img src="/assets/images/message.svg" alt="message" />
     </ng-container>
@@ -16,5 +18,5 @@
         cdkDrag
       />
     </ng-container>
-  </div>
-</div>
+  </aside>
+</main>

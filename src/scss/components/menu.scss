@@ -1,0 +1,39 @@
+// Overwrite styles of menu bar
+
+.menu-container .menu-bar .menu-items > li.menu-item.user-profile {
+  border-bottom: 1px solid #c4c4c4;
+
+  .item-text {
+    margin-left: 1rem;
+    color: #000000;
+  }
+
+  @media (min-width: 992px) {
+    position: absolute;
+    right: 1rem;
+    border-bottom: 0;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      border-left: 1px solid #c4c4c4;
+      margin-right: 3rem;
+      transform: scale(0.5);
+    }
+
+    .item-text {
+      display: none;
+    }
+  }
+
+  .icon-arrow-down {
+    font-size: 0.5rem;
+  }
+}
+
+.menu-container .menu-bar .menu-items > li.menu-item.user-profile ul {
+  @media (min-width: 992px) {
+    transform: translate(-50%);
+  }
+}
